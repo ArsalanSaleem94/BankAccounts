@@ -12,7 +12,7 @@ namespace Web.Controllers
     {
         //Here we can do dependency injecions to add one more protective layer, but right now avoided intentionally
         BankAccountController bac = new BankAccountController();
-        TransactionController tac = new TransactionController();
+       
 
         // GET: Home
         public ActionResult Index()
@@ -29,10 +29,10 @@ namespace Web.Controllers
         {
             return View();
         }
-
+        
+        [HttpPost]
         public ActionResult Login(string username, string password)
         {
-
             bool isLogged = bac.Login(username, password);
             if (isLogged)
             {

@@ -11,10 +11,11 @@ namespace WebApi.Controllers
 {
     public class BankAccountController : ApiController
     {
+        Funtionality func = new Funtionality();
         [HttpPost]
         public void New(string username, string password, decimal openingBalance)
         {
-            Funtionality func = new Funtionality();
+            
             BankAccount ba = new BankAccount();
             ba.AccountBalance = openingBalance;
             ba.Password = password;
@@ -25,7 +26,9 @@ namespace WebApi.Controllers
 
         public bool Login(string username, string password)
         {
-            throw new NotImplementedException();
+            return func.Login(username, password);
         }
+
+        
     }
 }
