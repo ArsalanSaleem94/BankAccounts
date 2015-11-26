@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "NewAccount";
+}
+
+<h2>NewAccount</h2>
+
+
+@using (Html.BeginForm("OpenAccount", "Home"))
+{
+    <center>
+        <div class="row">
+            <div>
+                <div class="row">
+                    <input type="text" name="username" class="input-lg" placeholder="Enter your username..." />
+                </div>
+                <br />
+                <div class="row">
+                    <input type="password" name="password" class="input-lg" placeholder="Enter your password..." />
+                </div>
+                <br />
+                <div class="row">
+                    <input type="text" name="AccountBalance" class="input-lg" placeholder="Enter your opening balance..." />
+                </div>
+                <br />
+                <div class="row">
+                    <button type="submit" class="btn btn-danger" value="Submit">Open Account</button>
+                </div>
+            </div>
+    </center>
+}
